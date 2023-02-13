@@ -1,0 +1,32 @@
+/* ====================
+	Variables
+==================== */
+
+:root {
+
+	/* colors */
+
+	--color-red: #ff6b81;
+	--color-green: #1abc9c;
+	--color-blue: #31b9ff;
+	--color-green-light: #9beada;
+	--color-green-light-opacity: rgba(155, 234, 218, 0.5);
+
+
+	/* app colors */
+
+	--color-bg-primary: #404157;
+
+	--color-text-primary: #fff;
+	--color-text-secondary: rgba(255, 255, 255, 0.4);
+	--color-text-tertiary: rgba(255, 255, 255, 0.7);
+	--color-text-inverted: #2d4775;
+
+	--color-danger: var(--color-red);
+	--color-success: var(--color-green);
+
+	/* font */
+
+	--font-primary: 'Roboto', sans-serif;
+
+}

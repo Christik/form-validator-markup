@@ -1,0 +1,258 @@
+/* ====================
+	Form Label
+==================== */
+
+.form-label {
+	display: block;
+	color: var(--color-text-secondary);
+	font-size: .7rem;
+	letter-spacing: .04em;
+}
+
+/* ====================
+	Form Field
+==================== */
+
+.field {
+	display: block;
+	width: 100%;
+	min-height: 2.2rem;
+	padding: 0 1rem;
+	border-radius: 1.1rem;
+	border: solid 1px rgba(255, 255, 255, .15);
+	color: var(--color-text-primary);
+	font-size: .7rem;
+	font-weight: 400;
+	letter-spacing: .04em;
+	background: linear-gradient(
+		rgba(255, 255, 255, .02),
+		rgba(255, 255, 255, .1)
+	);
+	-webkit-backdrop-filter: blur(4rem) saturate(180%);
+	backdrop-filter: blur(4rem) saturate(180%);
+	box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .15);
+	outline: none;
+}
+
+.field::placeholder {
+	color: var(--color-text-tertiary);
+	opacity: 1;
+}
+
+/* ====================
+	Form Icon
+==================== */
+
+.form-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1.8rem;
+	height: 1.8rem;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .1);
+}
+
+.form-icon__svg {
+	display: block;
+	width: 55%;
+	height: 55%;
+}
+
+.form-icon__shape {
+		fill: rgba(255, 255, 255, .5);
+}
+
+.form-icon__stroke {
+		fill: none;
+		stroke: rgba(255, 255, 255, .5);
+		stroke-width: 2;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-miterlimit: 10;
+}
+
+/* ====================
+	Form Field Focus
+==================== */
+
+.field:focus + .form-icon {
+	background: rgba(255, 255, 255, .2);
+}
+
+.field:focus + .form-icon .form-icon__shape {
+	fill: #fff;
+}
+
+.field:focus + .form-icon .form-icon__stroke {
+	fill: none;
+	stroke: #fff;
+}
+
+/* ====================
+	Form Field State
+==================== */
+
+.field--error + .form-icon .form-icon__shape {
+	fill: var(--color-danger);
+}
+
+.field--error + .form-icon .form-icon__stroke {
+	fill: none;
+	stroke: var(--color-danger);
+}
+
+.field--success + .form-icon .form-icon__shape {
+	fill: var(--color-success);
+}
+
+.field--success + .form-icon .form-icon__stroke {
+	fill: none;
+	stroke: var(--color-success);
+}
+
+/* ====================
+	Field with Icon
+==================== */
+
+.field-with-icon {
+	position: relative;
+}
+
+.field-with-icon__icon {
+	position: absolute;
+	left: .2rem;
+	top: .2rem;
+}
+
+.field-with-icon__input {
+	padding-left: 2.7rem;
+}
+
+/* ====================
+	Password
+==================== */
+
+.field-password {
+	position: relative;
+}
+
+.field-password__input {
+	padding-right: 2.5rem;
+}
+
+.field-password__button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.2rem;
+	height: 2.2rem;
+	overflow: hidden;
+	border: none;
+	text-indent: -1000px;
+	background: none;
+	opacity: .5;
+	cursor: pointer;
+}
+
+.field-password__button:before,
+.field-password__button:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	background: no-repeat 50% 50%;
+	background-size: 45% 45%;
+}
+
+.field-password__button:before {
+	background-image: url('../../img/icon-eye-hide.svg');
+}
+
+.field-password__button:after {
+	opacity: 1;
+	background-image: url('../../img/icon-eye-show.svg');
+}
+
+.field-password--shown .field-password__button:before {
+	opacity: 1;
+}
+
+.field-password--shown .field-password__button:after {
+	opacity: 0;
+}
+
+@media (hover: hover) {
+	.field-password__button:hover {
+		opacity: 1;
+	}
+}
+
+/* ====================
+	Error
+==================== */
+
+.error {
+	color: var(--color-danger);
+	font-size: .7rem;
+	letter-spacing: .04em;
+}
+
+/* ====================
+	Form
+==================== */
+
+.form {
+	width: 100%;
+	max-width: 20rem;
+	padding: 1.5rem 2rem 2.5rem;
+	background: rgba(255, 255, 255, .07);
+	border-radius: .5rem;
+	-webkit-backdrop-filter: blur(.3rem) saturate(120%);
+	backdrop-filter: blur(.3rem) saturate(120%);
+	border: solid 2px rgba(255, 255, 255, 0.15);
+	border-bottom: none;
+	border-left-color: rgba(255, 255, 255, .05);
+	border-right-color: rgba(255, 255, 255, .1);
+	border-right-width: 1px;
+	color: var(--color-text-primary);
+}
+
+.form__title {
+	margin: 0 0 1.25em;
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: .02em;
+}
+
+.form__group {
+	margin-bottom: .75rem;
+}
+
+.form__label {
+	margin: 0 0 .5em 1rem;
+}
+
+.form__submit {
+	margin-top: 1.5rem;
+}
+
+.form__error {
+	margin: .5em 0 0 1rem;
+}
+
+@media (max-width: 400px) {
+	.form {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}

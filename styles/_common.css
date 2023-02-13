@@ -1,0 +1,25 @@
+/* ====================
+	Common
+==================== */
+
+html { font-size: 125%; }
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 1.5rem 1rem;
+	color: var(--color-text-primary);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	font-family: var(--font-primary);
+	line-height: normal;
+	background-color: var(--color-bg-primary);
+	background-image: url('../img/night-gradient.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
